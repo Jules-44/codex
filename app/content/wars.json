@@ -1,0 +1,873 @@
+[
+  {
+    "id": "korean-war",
+    "name": "Korean War",
+    "alternate_names": ["Forgotten War", "Korean Conflict", "6·25 War"],
+    "type": "interstate",
+    "region": "asia-pacific",
+    "start_date": "1950-06-25",
+    "end_date": "1953-07-27",
+    "status": "armistice",
+    "countries": {
+      "side_a": ["South Korea", "United States", "United Kingdom", "Canada", "Australia", "Turkey", "Philippines", "Thailand", "Ethiopia", "France", "Greece", "Colombia", "Belgium", "Netherlands", "New Zealand", "Luxembourg", "South Africa"],
+      "side_b": ["North Korea", "China", "Soviet Union"],
+      "neutral": []
+    },
+    "outcome": "Armistice — Korean Peninsula divided at 38th parallel; technically no peace treaty signed",
+    "casualties": {
+      "total_estimate": "~3,000,000",
+      "military": "~1,200,000",
+      "civilian": "~1,800,000"
+    },
+    "short_description": "A war between North and South Korea in which a UN force led by the United States fought for the South, and China fought for the North following a North Korean invasion. It ended in an armistice that established the Korean Demilitarized Zone.",
+    "tags": ["cold-war", "un-intervention", "armistice", "peninsula-division"],
+    "sub_events": [
+      {
+        "id": "battle-of-pusan-perimeter",
+        "name": "Battle of Pusan Perimeter",
+        "type": "battle",
+        "date": "1950-08-04",
+        "end_date": "1950-09-18",
+        "location": "Pusan, South Korea",
+        "short_description": "UN forces held a desperate defensive perimeter around the port of Pusan against overwhelming North Korean forces."
+      },
+      {
+        "id": "inchon-landing",
+        "name": "Battle of Inchon",
+        "type": "operation",
+        "date": "1950-09-15",
+        "end_date": "1950-09-19",
+        "location": "Inchon, South Korea",
+        "short_description": "A daring UN amphibious assault behind enemy lines that turned the tide of the war."
+      },
+      {
+        "id": "battle-of-chosin-reservoir",
+        "name": "Battle of Chosin Reservoir",
+        "type": "battle",
+        "date": "1950-11-27",
+        "end_date": "1950-12-13",
+        "location": "Chosin Reservoir, North Korea",
+        "short_description": "UN forces were encircled by Chinese troops in freezing conditions; a brutal fighting withdrawal became legendary."
+      }
+    ]
+  },
+  {
+    "id": "first-indochina-war",
+    "name": "First Indochina War",
+    "alternate_names": ["Franco-Vietnamese War", "French Indochina War"],
+    "type": "colonial-independence",
+    "region": "asia-pacific",
+    "start_date": "1946-12-19",
+    "end_date": "1954-08-01",
+    "status": "ended",
+    "countries": {
+      "side_a": ["France", "French Union forces"],
+      "side_b": ["Việt Minh", "Vietnam (DRV)", "Pathet Lao", "Khmer Issarak"],
+      "neutral": []
+    },
+    "outcome": "French defeat; Geneva Accords divided Vietnam at the 17th parallel",
+    "casualties": {
+      "total_estimate": "~500,000",
+      "military": "~200,000",
+      "civilian": "~300,000"
+    },
+    "short_description": "A war between France and the Việt Minh independence movement, culminating in the French defeat at Dien Bien Phu and the partition of Vietnam.",
+    "tags": ["cold-war", "decolonization", "france", "vietnam"],
+    "sub_events": [
+      {
+        "id": "battle-of-dien-bien-phu",
+        "name": "Battle of Dien Bien Phu",
+        "type": "battle",
+        "date": "1954-03-13",
+        "end_date": "1954-05-07",
+        "location": "Dien Bien Phu, Vietnam",
+        "short_description": "The decisive battle in which Việt Minh forces surrounded and destroyed the French garrison, ending the war."
+      }
+    ]
+  },
+  {
+    "id": "algerian-war",
+    "name": "Algerian War of Independence",
+    "alternate_names": ["Algerian Revolution", "Algerian War"],
+    "type": "colonial-independence",
+    "region": "africa",
+    "start_date": "1954-11-01",
+    "end_date": "1962-07-05",
+    "status": "ended",
+    "countries": {
+      "side_a": ["France"],
+      "side_b": ["Algeria (FLN)", "ALN"],
+      "neutral": []
+    },
+    "outcome": "Algerian independence; over 1 million Europeans left Algeria",
+    "casualties": {
+      "total_estimate": "~400,000–1,000,000",
+      "military": "~150,000",
+      "civilian": "~300,000+"
+    },
+    "short_description": "A brutal independence war fought between Algerian nationalist guerrillas (FLN) and France, marked by widespread torture, terrorism, and civilian massacres on both sides.",
+    "tags": ["decolonization", "france", "north-africa", "guerrilla"],
+    "sub_events": [
+      {
+        "id": "battle-of-algiers",
+        "name": "Battle of Algiers",
+        "type": "campaign",
+        "date": "1956-09-30",
+        "end_date": "1957-09-24",
+        "location": "Algiers, Algeria",
+        "short_description": "A brutal urban guerrilla campaign by the FLN, met with systematic torture and repression by French paratroopers."
+      }
+    ]
+  },
+  {
+    "id": "vietnam-war",
+    "name": "Vietnam War",
+    "alternate_names": ["Second Indochina War", "American War", "Resistance War Against America"],
+    "type": "interstate",
+    "region": "asia-pacific",
+    "start_date": "1955-11-01",
+    "end_date": "1975-04-30",
+    "status": "ended",
+    "countries": {
+      "side_a": ["South Vietnam", "United States", "South Korea", "Australia", "Thailand", "Philippines", "New Zealand"],
+      "side_b": ["North Vietnam", "Viet Cong", "Pathet Lao", "Khmer Rouge", "China", "Soviet Union"],
+      "neutral": []
+    },
+    "outcome": "North Vietnamese victory; reunification of Vietnam under communist rule",
+    "casualties": {
+      "total_estimate": "~3,500,000",
+      "military": "~1,353,000",
+      "civilian": "~2,000,000+"
+    },
+    "short_description": "A prolonged Cold War-era conflict in which North Vietnam and its Viet Cong allies fought to reunify Vietnam under communism, opposed by South Vietnam and the United States. It ended with the fall of Saigon.",
+    "tags": ["cold-war", "usa", "communism", "proxy-war", "defoliation"],
+    "sub_events": [
+      {
+        "id": "tet-offensive",
+        "name": "Tet Offensive",
+        "type": "operation",
+        "date": "1968-01-30",
+        "end_date": "1968-09-23",
+        "location": "Across South Vietnam",
+        "short_description": "A massive coordinated surprise attack by North Vietnamese forces during Tết, which shifted American public opinion against the war."
+      },
+      {
+        "id": "battle-of-hue",
+        "name": "Battle of Huế",
+        "type": "battle",
+        "date": "1968-01-31",
+        "end_date": "1968-03-03",
+        "location": "Huế, South Vietnam",
+        "short_description": "One of the bloodiest and longest battles of the war, fought house-to-house through Huế's ancient citadel."
+      }
+    ]
+  },
+  {
+    "id": "six-day-war",
+    "name": "Six-Day War",
+    "alternate_names": ["Third Arab-Israeli War", "June War", "1967 Arab-Israeli War"],
+    "type": "interstate",
+    "region": "middle-east",
+    "start_date": "1967-06-05",
+    "end_date": "1967-06-10",
+    "status": "ended",
+    "countries": {
+      "side_a": ["Israel"],
+      "side_b": ["Egypt", "Jordan", "Syria", "Iraq", "Saudi Arabia", "Kuwait", "Algeria"],
+      "neutral": []
+    },
+    "outcome": "Decisive Israeli victory; Israel captured the Sinai Peninsula, Gaza Strip, West Bank, and Golan Heights",
+    "casualties": {
+      "total_estimate": "~20,000",
+      "military": "~18,000",
+      "civilian": "~2,000"
+    },
+    "short_description": "A swift and decisive war in which Israel launched preemptive strikes against Arab coalition forces, tripling its territory in six days. The occupation of Palestinian territories continues to shape the Middle East conflict today.",
+    "tags": ["arab-israeli-conflict", "middle-east", "preemptive-strike", "occupation"],
+    "sub_events": [
+      {
+        "id": "operation-focus",
+        "name": "Operation Focus",
+        "type": "operation",
+        "date": "1967-06-05",
+        "end_date": "1967-06-05",
+        "location": "Egypt, Jordan, Syria",
+        "short_description": "Israel's devastating preemptive air strike that destroyed the Arab air forces on the ground within hours."
+      }
+    ]
+  },
+  {
+    "id": "yom-kippur-war",
+    "name": "Yom Kippur War",
+    "alternate_names": ["October War", "Ramadan War", "1973 Arab-Israeli War"],
+    "type": "interstate",
+    "region": "middle-east",
+    "start_date": "1973-10-06",
+    "end_date": "1973-10-25",
+    "status": "ended",
+    "countries": {
+      "side_a": ["Egypt", "Syria", "Iraq", "Jordan", "Saudi Arabia", "Cuba", "Soviet Union"],
+      "side_b": ["Israel", "United States"],
+      "neutral": []
+    },
+    "outcome": "Military stalemate; led to the Camp David Accords and Egyptian-Israeli peace treaty",
+    "casualties": {
+      "total_estimate": "~18,000",
+      "military": "~15,000",
+      "civilian": "~3,000"
+    },
+    "short_description": "Egypt and Syria launched a surprise attack on Israel during Yom Kippur, initially overrunning Israeli positions. Israel counterattacked successfully, eventually crossing the Suez Canal. The war led to the 1979 Egypt-Israel peace treaty.",
+    "tags": ["arab-israeli-conflict", "middle-east", "surprise-attack", "cold-war"],
+    "sub_events": []
+  },
+  {
+    "id": "soviet-afghan-war",
+    "name": "Soviet-Afghan War",
+    "alternate_names": ["Soviet Invasion of Afghanistan", "Afghan Jihad"],
+    "type": "interstate",
+    "region": "central-asia",
+    "start_date": "1979-12-24",
+    "end_date": "1989-02-15",
+    "status": "ended",
+    "countries": {
+      "side_a": ["Soviet Union", "Afghanistan (DRA)"],
+      "side_b": ["Mujahideen", "United States (CIA)", "Pakistan", "Saudi Arabia", "China", "Egypt"],
+      "neutral": []
+    },
+    "outcome": "Soviet withdrawal; Afghan civil war continued; rise of the Taliban",
+    "casualties": {
+      "total_estimate": "~2,000,000",
+      "military": "~100,000",
+      "civilian": "~1,900,000"
+    },
+    "short_description": "The Soviet Union invaded Afghanistan to support its communist government against Mujahideen guerrillas backed by the US, Pakistan and Saudi Arabia. The decade-long war devastated Afghanistan and contributed to the collapse of the USSR.",
+    "tags": ["cold-war", "ussr", "guerrilla", "cia", "mujahideen", "proxy-war"],
+    "sub_events": [
+      {
+        "id": "operation-cyclone",
+        "name": "Operation Cyclone",
+        "type": "operation",
+        "date": "1979-01-01",
+        "end_date": "1989-01-01",
+        "location": "Afghanistan / Pakistan",
+        "short_description": "The CIA's programme to arm and finance Mujahideen fighters — one of the longest and most expensive covert operations in CIA history."
+      }
+    ]
+  },
+  {
+    "id": "iran-iraq-war",
+    "name": "Iran–Iraq War",
+    "alternate_names": ["First Persian Gulf War", "Imposed War", "Sacred Defence"],
+    "type": "interstate",
+    "region": "middle-east",
+    "start_date": "1980-09-22",
+    "end_date": "1988-08-20",
+    "status": "ended",
+    "countries": {
+      "side_a": ["Iraq"],
+      "side_b": ["Iran"],
+      "neutral": []
+    },
+    "outcome": "Stalemate; UN-brokered ceasefire with no territorial changes; estimated 500,000–1,000,000 dead",
+    "casualties": {
+      "total_estimate": "~500,000–1,000,000",
+      "military": "~400,000",
+      "civilian": "~100,000+"
+    },
+    "short_description": "One of the 20th century's bloodiest wars, fought between Iraq under Saddam Hussein and Iran under Ayatollah Khomeini. Notable for the use of chemical weapons by Iraq and human wave infantry assaults by Iran. Ended in a stalemate.",
+    "tags": ["middle-east", "chemical-weapons", "saddam", "khomeini"],
+    "sub_events": []
+  },
+  {
+    "id": "falklands-war",
+    "name": "Falklands War",
+    "alternate_names": ["Malvinas War", "Falklands Conflict"],
+    "type": "interstate",
+    "region": "americas",
+    "start_date": "1982-04-02",
+    "end_date": "1982-06-14",
+    "status": "ended",
+    "countries": {
+      "side_a": ["Argentina"],
+      "side_b": ["United Kingdom"],
+      "neutral": []
+    },
+    "outcome": "British victory; Argentine surrender; islands remain under British control",
+    "casualties": {
+      "total_estimate": "~900",
+      "military": "~900",
+      "civilian": "~3"
+    },
+    "short_description": "Argentina invaded the British-held Falkland Islands (Islas Malvinas). Britain dispatched a naval task force 8,000 miles to retake them. Argentina surrendered after 74 days. The war led to the fall of Argentina's military junta.",
+    "tags": ["south-atlantic", "britain", "argentina", "sovereignty"],
+    "sub_events": [
+      {
+        "id": "sinking-belgrano",
+        "name": "Sinking of the General Belgrano",
+        "type": "battle",
+        "date": "1982-05-02",
+        "end_date": "1982-05-02",
+        "location": "South Atlantic Ocean",
+        "short_description": "A British submarine torpedoed the Argentine cruiser General Belgrano, killing 323 sailors — the most controversial action of the war."
+      }
+    ]
+  },
+  {
+    "id": "gulf-war",
+    "name": "Gulf War",
+    "alternate_names": ["Persian Gulf War", "Operation Desert Storm", "First Gulf War"],
+    "type": "interstate",
+    "region": "middle-east",
+    "start_date": "1990-08-02",
+    "end_date": "1991-02-28",
+    "status": "ended",
+    "countries": {
+      "side_a": ["Iraq"],
+      "side_b": ["United States", "Saudi Arabia", "United Kingdom", "Kuwait", "France", "Egypt", "Syria", "34-nation coalition"],
+      "neutral": []
+    },
+    "outcome": "Coalition victory; Iraq expelled from Kuwait; but Saddam Hussein remained in power",
+    "casualties": {
+      "total_estimate": "~100,000",
+      "military": "~50,000",
+      "civilian": "~50,000"
+    },
+    "short_description": "Iraq under Saddam Hussein invaded Kuwait, triggering a massive UN-sanctioned coalition military response led by the US. Operation Desert Storm's air and ground campaign liberated Kuwait in 100 hours of ground combat.",
+    "tags": ["middle-east", "us-led", "coalition", "un-mandate", "saddam", "kuwait"],
+    "sub_events": [
+      {
+        "id": "operation-desert-storm",
+        "name": "Operation Desert Storm",
+        "type": "operation",
+        "date": "1991-01-17",
+        "end_date": "1991-02-28",
+        "location": "Kuwait, Iraq",
+        "short_description": "The US-led coalition's air and ground offensive that liberated Kuwait in just 42 days, featuring devastating air bombardment followed by 100 hours of ground combat."
+      }
+    ]
+  },
+  {
+    "id": "rwandan-genocide",
+    "name": "Rwandan Genocide",
+    "alternate_names": ["Genocide against the Tutsi"],
+    "type": "genocide",
+    "region": "africa",
+    "start_date": "1994-04-07",
+    "end_date": "1994-07-15",
+    "status": "ended",
+    "countries": {
+      "side_a": ["Hutu extremists (Interahamwe)", "Rwandan government forces"],
+      "side_b": ["Tutsi population", "RPF (Rwandan Patriotic Front)"],
+      "neutral": ["United Nations (failed to intervene)", "France", "Belgium", "United States"]
+    },
+    "outcome": "RPF military victory; an estimated 800,000 Tutsi and moderate Hutu killed in 100 days",
+    "casualties": {
+      "total_estimate": "~800,000",
+      "military": "unknown",
+      "civilian": "~800,000"
+    },
+    "short_description": "In 100 days, Hutu extremists systematically murdered an estimated 800,000 Tutsi and moderate Hutu in Rwanda — one of the fastest genocides in history. The international community failed to intervene. The RPF eventually halted the killings.",
+    "tags": ["genocide", "africa", "ethnic-violence", "un-failure", "tribunal"],
+    "sub_events": []
+  },
+  {
+    "id": "first-chechen-war",
+    "name": "First Chechen War",
+    "alternate_names": ["First Russo-Chechen War"],
+    "type": "civil",
+    "region": "europe",
+    "start_date": "1994-12-11",
+    "end_date": "1996-08-31",
+    "status": "ended",
+    "countries": {
+      "side_a": ["Russia"],
+      "side_b": ["Chechen Republic of Ichkeria"],
+      "neutral": []
+    },
+    "outcome": "Russian withdrawal; Chechen de facto independence (Khasavyurt Accord)",
+    "casualties": {
+      "total_estimate": "~50,000–80,000",
+      "military": "~20,000",
+      "civilian": "~30,000–50,000"
+    },
+    "short_description": "Russia launched a military campaign to prevent Chechen independence, resulting in urban warfare and heavy civilian casualties, particularly in Grozny. Russia withdrew after suffering humiliating defeats.",
+    "tags": ["russia", "caucasus", "separatism", "urban-warfare"],
+    "sub_events": [
+      {
+        "id": "battle-of-grozny-1994",
+        "name": "Battle of Grozny (1994–1995)",
+        "type": "battle",
+        "date": "1994-12-31",
+        "end_date": "1995-03-06",
+        "location": "Grozny, Chechnya",
+        "short_description": "Russian forces attempted to storm Grozny on New Year's Eve 1994 and were devastated in fierce urban fighting. The city was eventually captured at enormous cost."
+      }
+    ]
+  },
+  {
+    "id": "bosnian-war",
+    "name": "Bosnian War",
+    "alternate_names": ["War in Bosnia and Herzegovina"],
+    "type": "civil",
+    "region": "europe",
+    "start_date": "1992-04-01",
+    "end_date": "1995-12-14",
+    "status": "ended",
+    "countries": {
+      "side_a": ["Republic of Bosnia and Herzegovina", "NATO (from 1994)"],
+      "side_b": ["Republika Srpska", "Yugoslav People's Army", "Serbian Volunteer Guard", "Croatian Republic of Herzeg-Bosnia (initially)"],
+      "neutral": []
+    },
+    "outcome": "Dayton Agreement; Bosnia divided into two entities; Republika Srpska and Federation of Bosnia and Herzegovina",
+    "casualties": {
+      "total_estimate": "~100,000",
+      "military": "~45,000",
+      "civilian": "~55,000"
+    },
+    "short_description": "Following Yugoslavia's breakup, Bosnia's declaration of independence triggered war between Bosniak, Serbian, and Croatian factions. Marked by ethnic cleansing, mass rape as a weapon of war, and the Srebrenica massacre.",
+    "tags": ["balkans", "yugoslavia", "ethnic-cleansing", "nato", "genocide", "srebrenica"],
+    "sub_events": [
+      {
+        "id": "srebrenica-massacre",
+        "name": "Srebrenica Massacre",
+        "type": "atrocity",
+        "date": "1995-07-11",
+        "end_date": "1995-07-22",
+        "location": "Srebrenica, Bosnia",
+        "short_description": "Bosnian Serb forces murdered over 8,000 Bosniak Muslim men and boys — Europe's worst mass killing since WWII, ruled a genocide by the International Court of Justice."
+      },
+      {
+        "id": "siege-of-sarajevo",
+        "name": "Siege of Sarajevo",
+        "type": "siege",
+        "date": "1992-04-05",
+        "end_date": "1996-02-29",
+        "location": "Sarajevo, Bosnia",
+        "short_description": "The longest siege of a capital city in modern warfare history, lasting 1,425 days. Serbian forces sniped civilians and shelled the city daily."
+      }
+    ]
+  },
+  {
+    "id": "kosovo-war",
+    "name": "Kosovo War",
+    "alternate_names": ["Kosovo Conflict"],
+    "type": "civil",
+    "region": "europe",
+    "start_date": "1998-02-28",
+    "end_date": "1999-06-11",
+    "status": "ended",
+    "countries": {
+      "side_a": ["FR Yugoslavia", "Serbia"],
+      "side_b": ["Kosovo Liberation Army (KLA)", "NATO"],
+      "neutral": []
+    },
+    "outcome": "NATO victory; Yugoslav forces withdrew; Kosovo under UN administration; declared independence in 2008",
+    "casualties": {
+      "total_estimate": "~13,500",
+      "military": "~3,000",
+      "civilian": "~10,500"
+    },
+    "short_description": "Serbian forces conducted ethnic cleansing against Kosovo Albanians, triggering a NATO air campaign (Operation Allied Force). Over 1 million Albanians were displaced. Kosovo eventually declared independence in 2008.",
+    "tags": ["balkans", "nato", "ethnic-cleansing", "independence", "air-campaign"],
+    "sub_events": [
+      {
+        "id": "operation-allied-force",
+        "name": "Operation Allied Force",
+        "type": "operation",
+        "date": "1999-03-24",
+        "end_date": "1999-06-10",
+        "location": "FR Yugoslavia",
+        "short_description": "NATO's 78-day air campaign against Yugoslavia — the first NATO combat operation in history, conducted without UN Security Council authorization."
+      }
+    ]
+  },
+  {
+    "id": "second-chechen-war",
+    "name": "Second Chechen War",
+    "alternate_names": ["Second Russo-Chechen War", "Chechen Counterterrorism Operation"],
+    "type": "civil",
+    "region": "europe",
+    "start_date": "1999-08-26",
+    "end_date": "2009-04-16",
+    "status": "ended",
+    "countries": {
+      "side_a": ["Russia", "Chechen pro-Russian forces"],
+      "side_b": ["Chechen separatists", "Islamist fighters"],
+      "neutral": []
+    },
+    "outcome": "Russian victory; Chechnya integrated back into Russia under Kadyrov",
+    "casualties": {
+      "total_estimate": "~25,000–50,000",
+      "military": "~15,000",
+      "civilian": "~25,000"
+    },
+    "short_description": "Russia relaunched its military campaign in Chechnya following apartment bombings in Russia and a Chechen incursion into Dagestan. Grozny was razed. Russia installed Akhmad Kadyrov's government, ending the separatist conflict.",
+    "tags": ["russia", "caucasus", "separatism", "putin", "counterterrorism"],
+    "sub_events": []
+  },
+  {
+    "id": "war-in-afghanistan-2001",
+    "name": "War in Afghanistan",
+    "alternate_names": ["US-led Afghan War", "Operation Enduring Freedom"],
+    "type": "interstate",
+    "region": "central-asia",
+    "start_date": "2001-10-07",
+    "end_date": "2021-08-30",
+    "status": "ended",
+    "countries": {
+      "side_a": ["United States", "NATO", "Afghan National Security Forces", "Northern Alliance"],
+      "side_b": ["Taliban", "Al-Qaeda", "Haqqani Network", "ISIS-K"],
+      "neutral": []
+    },
+    "outcome": "Taliban returned to power; US and NATO forces withdrew after 20 years; longest war in US history",
+    "casualties": {
+      "total_estimate": "~176,000+",
+      "military": "~70,000",
+      "civilian": "~71,000+"
+    },
+    "short_description": "Launched after the September 11 attacks, the US-led invasion toppled the Taliban government and killed Al-Qaeda leaders. Two decades of nation-building failed; the Taliban retook Kabul in August 2021 as US forces withdrew.",
+    "tags": ["9/11", "war-on-terror", "nato", "taliban", "al-qaeda", "nation-building"],
+    "sub_events": [
+      {
+        "id": "battle-of-tora-bora",
+        "name": "Battle of Tora Bora",
+        "type": "battle",
+        "date": "2001-12-12",
+        "end_date": "2001-12-17",
+        "location": "Tora Bora, Afghanistan",
+        "short_description": "US and Afghan forces attempted to capture Osama bin Laden in mountain cave complexes. He escaped into Pakistan."
+      },
+      {
+        "id": "fall-of-kabul-2021",
+        "name": "Fall of Kabul (2021)",
+        "type": "operation",
+        "date": "2021-08-15",
+        "end_date": "2021-08-30",
+        "location": "Kabul, Afghanistan",
+        "short_description": "The Taliban swept into Kabul as the Afghan government collapsed, ending 20 years of US-backed rule in a matter of days."
+      }
+    ]
+  },
+  {
+    "id": "iraq-war",
+    "name": "Iraq War",
+    "alternate_names": ["Second Gulf War", "Operation Iraqi Freedom", "Operation New Dawn"],
+    "type": "interstate",
+    "region": "middle-east",
+    "start_date": "2003-03-20",
+    "end_date": "2011-12-18",
+    "status": "ended",
+    "countries": {
+      "side_a": ["United States", "United Kingdom", "Australia", "Poland"],
+      "side_b": ["Iraq (Saddam Hussein)", "Iraqi insurgents", "Al-Qaeda in Iraq", "Mahdi Army"],
+      "neutral": []
+    },
+    "outcome": "Saddam Hussein overthrown and executed; prolonged insurgency; sectarian civil war; ISIS emerged",
+    "casualties": {
+      "total_estimate": "~200,000–600,000+",
+      "military": "~35,000",
+      "civilian": "~150,000–500,000"
+    },
+    "short_description": "The US-led invasion toppled Saddam Hussein's regime based on claims of WMDs that proved false. The resulting power vacuum triggered a brutal insurgency, sectarian civil war, and the emergence of ISIS.",
+    "tags": ["wmd", "iraq", "saddam", "insurgency", "sectarian-violence", "isis-origins"],
+    "sub_events": [
+      {
+        "id": "battle-of-fallujah",
+        "name": "Battle of Fallujah",
+        "type": "battle",
+        "date": "2004-11-07",
+        "end_date": "2004-12-23",
+        "location": "Fallujah, Iraq",
+        "short_description": "The bloodiest battle of the Iraq War — US Marines fought house-to-house through Fallujah in one of the most intense urban battles since WWII."
+      }
+    ]
+  },
+  {
+    "id": "darfur-conflict",
+    "name": "Darfur Conflict",
+    "alternate_names": ["War in Darfur"],
+    "type": "civil",
+    "region": "africa",
+    "start_date": "2003-02-26",
+    "end_date": null,
+    "status": "ongoing",
+    "countries": {
+      "side_a": ["Sudan (government)", "Janjaweed militias", "Rapid Support Forces (RSF)"],
+      "side_b": ["SLA (Sudan Liberation Army)", "JEM (Justice and Equality Movement)", "Darfuri civilians"],
+      "neutral": []
+    },
+    "outcome": "Ongoing; ICC issued arrest warrant for Omar al-Bashir for genocide",
+    "casualties": {
+      "total_estimate": "~300,000–400,000",
+      "military": "unknown",
+      "civilian": "~300,000+"
+    },
+    "short_description": "The Sudanese government and Arab Janjaweed militias systematically attacked non-Arab African populations in Darfur, killing hundreds of thousands and displacing millions. The ICC ruled it genocide. Conflict continues in various forms.",
+    "tags": ["genocide", "africa", "sudan", "icc", "ethnic-violence", "displacement"],
+    "sub_events": []
+  },
+  {
+    "id": "2006-lebanon-war",
+    "name": "2006 Lebanon War",
+    "alternate_names": ["Second Lebanon War", "July War", "Hezbollah-Israel War"],
+    "type": "interstate",
+    "region": "middle-east",
+    "start_date": "2006-07-12",
+    "end_date": "2006-08-14",
+    "status": "ended",
+    "countries": {
+      "side_a": ["Israel"],
+      "side_b": ["Hezbollah", "Lebanon"],
+      "neutral": []
+    },
+    "outcome": "Ceasefire; Hezbollah survived and claimed victory; Israel failed to achieve strategic goals",
+    "casualties": {
+      "total_estimate": "~1,300",
+      "military": "~300",
+      "civilian": "~1,000"
+    },
+    "short_description": "Triggered by Hezbollah's cross-border raid and capture of Israeli soldiers, Israel launched an air campaign and ground invasion of Lebanon. Hezbollah's survival was seen as a strategic defeat for Israel.",
+    "tags": ["middle-east", "israel", "hezbollah", "lebanon", "asymmetric-warfare"],
+    "sub_events": []
+  },
+  {
+    "id": "libyan-civil-war",
+    "name": "Libyan Civil War",
+    "alternate_names": ["Libyan Conflict"],
+    "type": "civil",
+    "region": "africa",
+    "start_date": "2011-02-15",
+    "end_date": null,
+    "status": "ongoing",
+    "countries": {
+      "side_a": ["National Transitional Council", "Government of National Accord", "NATO (2011)"],
+      "side_b": ["Gaddafi loyalists (initially)", "Libyan National Army", "Various militias"],
+      "neutral": []
+    },
+    "outcome": "Gaddafi killed (2011); country split between rival governments; ongoing fragmented conflict",
+    "casualties": {
+      "total_estimate": "~25,000+",
+      "military": "unknown",
+      "civilian": "~25,000"
+    },
+    "short_description": "Arab Spring protests escalated into civil war; NATO airstrikes helped rebels overthrow Muammar Gaddafi. Post-Gaddafi Libya fragmented into rival factions and militia rule, becoming a failed state and migration crisis hub.",
+    "tags": ["arab-spring", "nato", "gaddafi", "north-africa", "failed-state", "migration"],
+    "sub_events": []
+  },
+  {
+    "id": "syrian-civil-war",
+    "name": "Syrian Civil War",
+    "alternate_names": ["Syrian Conflict", "Syrian Uprising"],
+    "type": "civil",
+    "region": "middle-east",
+    "start_date": "2011-03-15",
+    "end_date": null,
+    "status": "ongoing",
+    "countries": {
+      "side_a": ["Syrian Arab Republic (Assad government)", "Russia", "Iran", "Hezbollah"],
+      "side_b": ["Syrian opposition factions", "Free Syrian Army", "SDF/YPG", "HTS", "Turkey-backed forces", "United States"],
+      "neutral": []
+    },
+    "outcome": "Assad retained power over most territory; rebel strongholds remain; millions displaced; ISIS defeated territorially",
+    "casualties": {
+      "total_estimate": "~500,000+",
+      "military": "unknown",
+      "civilian": "~300,000+"
+    },
+    "short_description": "Syria's Arab Spring protests triggered a civil war drawing in Russia, Iran, Turkey, the US, and ISIS. One of the world's worst humanitarian disasters — half of Syria's population displaced, 500,000+ dead.",
+    "tags": ["arab-spring", "syria", "russia", "isis", "humanitarian-crisis", "refugee-crisis", "chemical-weapons"],
+    "sub_events": [
+      {
+        "id": "battle-of-aleppo",
+        "name": "Battle of Aleppo",
+        "type": "siege",
+        "date": "2012-07-19",
+        "end_date": "2016-12-22",
+        "location": "Aleppo, Syria",
+        "short_description": "A four-year siege of Syria's second city. Russian-backed Assad forces recaptured the rebel-held east of Aleppo in brutal fighting."
+      },
+      {
+        "id": "siege-of-raqqa",
+        "name": "Battle of Raqqa",
+        "type": "battle",
+        "date": "2017-06-06",
+        "end_date": "2017-10-17",
+        "location": "Raqqa, Syria",
+        "short_description": "US-backed Kurdish-led SDF forces fought ISIS for four months to liberate the Islamic State's self-declared capital."
+      }
+    ]
+  },
+  {
+    "id": "war-in-donbas",
+    "name": "War in Donbas",
+    "alternate_names": ["Donbass War", "Eastern Ukraine Conflict"],
+    "type": "civil",
+    "region": "europe",
+    "start_date": "2014-04-06",
+    "end_date": "2022-02-24",
+    "status": "ended",
+    "countries": {
+      "side_a": ["Ukraine"],
+      "side_b": ["Donetsk People's Republic", "Luhansk People's Republic", "Russia"],
+      "neutral": []
+    },
+    "outcome": "Frozen conflict; superseded by Russia's full-scale invasion in February 2022",
+    "casualties": {
+      "total_estimate": "~14,000",
+      "military": "~5,000",
+      "civilian": "~3,400"
+    },
+    "short_description": "Following Russia's annexation of Crimea, Russian-backed separatists seized parts of eastern Ukraine. Eight years of trench warfare and ceasefire violations followed, ended by Russia's full-scale invasion in February 2022.",
+    "tags": ["ukraine", "russia", "separatism", "minsk-agreements", "frozen-conflict"],
+    "sub_events": []
+  },
+  {
+    "id": "russia-ukraine-war",
+    "name": "Russia–Ukraine War",
+    "alternate_names": ["Ukraine War", "Russo-Ukrainian War", "War in Ukraine"],
+    "type": "interstate",
+    "region": "europe",
+    "start_date": "2022-02-24",
+    "end_date": null,
+    "status": "ongoing",
+    "countries": {
+      "side_a": ["Russia", "Belarus (limited)", "North Korea (supplies)", "Iran (drones)"],
+      "side_b": ["Ukraine", "United States (support)", "NATO allies (support)", "EU"],
+      "neutral": []
+    },
+    "outcome": "Ongoing — Russia controls approximately 20% of Ukrainian territory",
+    "casualties": {
+      "total_estimate": "~500,000+ (est.)",
+      "military": "~400,000+ (est.)",
+      "civilian": "~30,000+ (verified)"
+    },
+    "short_description": "Russia launched a full-scale invasion of Ukraine on February 24, 2022 — the largest conventional war in Europe since WWII. Ukraine mounted fierce resistance with Western support. The conflict has caused mass civilian casualties and a global humanitarian crisis.",
+    "tags": ["ukraine", "russia", "nato", "europe", "nuclear-threat", "sanctions", "war-crimes"],
+    "sub_events": [
+      {
+        "id": "battle-of-kyiv",
+        "name": "Battle of Kyiv",
+        "type": "battle",
+        "date": "2022-02-25",
+        "end_date": "2022-03-30",
+        "location": "Kyiv, Ukraine",
+        "short_description": "Russia's initial assault to capture Kyiv was repelled by Ukrainian defenders in 33 days. Russian forces withdrew from around the capital."
+      },
+      {
+        "id": "siege-of-mariupol",
+        "name": "Siege of Mariupol",
+        "type": "siege",
+        "date": "2022-02-24",
+        "end_date": "2022-05-20",
+        "location": "Mariupol, Ukraine",
+        "short_description": "Russian forces besieged and bombarded Mariupol for 86 days. Ukrainian defenders including Azov Battalion held out in the Azovstal steel plant before surrendering."
+      }
+    ]
+  },
+  {
+    "id": "yemeni-civil-war",
+    "name": "Yemeni Civil War",
+    "alternate_names": ["Yemen War", "Yemeni Crisis"],
+    "type": "civil",
+    "region": "middle-east",
+    "start_date": "2014-09-21",
+    "end_date": null,
+    "status": "ongoing",
+    "countries": {
+      "side_a": ["Houthi movement (Ansar Allah)", "Houthi-aligned forces", "Iran"],
+      "side_b": ["Yemeni government", "Saudi-led coalition", "UAE", "United States (support)"],
+      "neutral": []
+    },
+    "outcome": "Ongoing — UN calls it world's worst humanitarian crisis",
+    "casualties": {
+      "total_estimate": "~150,000–377,000",
+      "military": "unknown",
+      "civilian": "~150,000+"
+    },
+    "short_description": "Houthi rebels seized Yemen's capital Sanaa, triggering a Saudi-led military coalition intervention. The war has caused the world's worst humanitarian crisis, with millions facing famine and cholera epidemics.",
+    "tags": ["yemen", "houthi", "saudi-arabia", "iran", "proxy-war", "humanitarian-crisis", "famine"],
+    "sub_events": []
+  },
+  {
+    "id": "isis-conflict",
+    "name": "Rise and Fall of ISIS",
+    "alternate_names": ["War against ISIS", "War against ISIL", "War against Daesh", "Islamic State conflict"],
+    "type": "insurgency",
+    "region": "multi-regional",
+    "start_date": "2013-04-08",
+    "end_date": "2019-03-23",
+    "status": "ended",
+    "countries": {
+      "side_a": ["ISIS / ISIL / Daesh"],
+      "side_b": ["Iraq", "Syria", "United States", "Russia", "Kurdistan (Peshmerga/SDF)", "Iran", "International Coalition"],
+      "neutral": []
+    },
+    "outcome": "ISIS territorial caliphate destroyed; ISIS continues as insurgency",
+    "casualties": {
+      "total_estimate": "~200,000",
+      "military": "unknown",
+      "civilian": "~180,000"
+    },
+    "short_description": "ISIS declared a caliphate across Iraq and Syria in 2014, controlling territory the size of the UK. A global coalition of enemies gradually destroyed the caliphate by 2019, though ISIS continues as a decentralized terrorist network.",
+    "tags": ["isis", "caliphate", "terrorism", "iraq", "syria", "middle-east", "global-coalition"],
+    "sub_events": [
+      {
+        "id": "battle-of-mosul",
+        "name": "Battle of Mosul",
+        "type": "battle",
+        "date": "2016-10-16",
+        "end_date": "2017-07-10",
+        "location": "Mosul, Iraq",
+        "short_description": "A 9-month battle to retake Iraq's second-largest city from ISIS — one of the largest urban battles since WWII."
+      }
+    ]
+  },
+  {
+    "id": "tigray-war",
+    "name": "Tigray War",
+    "alternate_names": ["Ethiopian Civil War", "Tigray Conflict"],
+    "type": "civil",
+    "region": "africa",
+    "start_date": "2020-11-04",
+    "end_date": "2022-11-03",
+    "status": "ended",
+    "countries": {
+      "side_a": ["Ethiopian government", "Eritrea", "Amhara regional forces"],
+      "side_b": ["Tigray People's Liberation Front (TPLF)"],
+      "neutral": []
+    },
+    "outcome": "Pretoria Agreement ceasefire; TPLF disarms; humanitarian crisis ongoing",
+    "casualties": {
+      "total_estimate": "~300,000–500,000",
+      "military": "unknown",
+      "civilian": "~300,000+"
+    },
+    "short_description": "One of the deadliest conflicts of the 21st century. Ethiopian and Eritrean forces fought the TPLF in Tigray, with atrocities committed by all sides. Famine and mass atrocities affected millions.",
+    "tags": ["ethiopia", "eritrea", "africa", "famine", "atrocities", "horn-of-africa"],
+    "sub_events": []
+  },
+  {
+    "id": "sudan-civil-war-2023",
+    "name": "Sudan Civil War (2023–present)",
+    "alternate_names": ["RSF–SAF Conflict", "Sudanese Civil War"],
+    "type": "civil",
+    "region": "africa",
+    "start_date": "2023-04-15",
+    "end_date": null,
+    "status": "ongoing",
+    "countries": {
+      "side_a": ["Rapid Support Forces (RSF)"],
+      "side_b": ["Sudanese Armed Forces (SAF)"],
+      "neutral": []
+    },
+    "outcome": "Ongoing — largest displacement crisis in the world as of 2024",
+    "casualties": {
+      "total_estimate": "~150,000+",
+      "military": "unknown",
+      "civilian": "~30,000+"
+    },
+    "short_description": "War erupted between Sudan's army (SAF) and the paramilitary Rapid Support Forces (RSF), creating the world's largest displacement crisis — over 10 million people forced from their homes. Mass atrocities reported in Darfur.",
+    "tags": ["sudan", "rsf", "africa", "darfur", "displacement", "atrocities"],
+    "sub_events": []
+  }
+]

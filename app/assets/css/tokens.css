@@ -1,0 +1,181 @@
+/* ============================================
+   CHRONICLE OF WAR — DESIGN TOKENS
+   CSS custom properties for both themes
+   ============================================ */
+
+/* ---- DARK DOCUMENTARY THEME (default) ---- */
+:root,
+[data-theme="dark"] {
+  /* Background layers */
+  --bg-base: #0a0a0c;
+  --bg-surface: #111318;
+  --bg-surface-2: #1a1c24;
+  --bg-surface-3: #22252f;
+  --bg-overlay: rgba(10, 10, 12, 0.85);
+
+  /* Text */
+  --text-primary: #e8e4dc;
+  --text-secondary: #a09890;
+  --text-muted: #5a5650;
+  --text-inverse: #0a0a0c;
+
+  /* Brand accents */
+  --accent-primary: #c9a84c;      /* Aged gold */
+  --accent-primary-dim: #7a6128;  /* Dimmed gold */
+  --accent-secondary: #8b1a1a;    /* Deep crimson */
+  --accent-secondary-bright: #c0392b; /* Bright crimson */
+
+  /* Borders */
+  --border-subtle: rgba(255, 255, 255, 0.06);
+  --border-default: rgba(255, 255, 255, 0.12);
+  --border-strong: rgba(201, 168, 76, 0.3);
+
+  /* Modal/overlay */
+  --modal-backdrop: rgba(0, 0, 0, 0.75);
+  --modal-bg: #13151c;
+
+  /* Scrollbar */
+  --scrollbar-track: #111318;
+  --scrollbar-thumb: #2a2c34;
+  --scrollbar-thumb-hover: #c9a84c;
+
+  /* Header */
+  --header-bg: rgba(10, 10, 12, 0.95);
+  --header-border: rgba(201, 168, 76, 0.2);
+
+  /* Timeline */
+  --timeline-line: rgba(201, 168, 76, 0.2);
+  --timeline-dot: #c9a84c;
+  --decade-label: rgba(201, 168, 76, 0.6);
+}
+
+/* ---- CLEAN ENCYCLOPEDIC THEME ---- */
+[data-theme="light"] {
+  /* Background layers */
+  --bg-base: #f5f0e8;
+  --bg-surface: #faf7f2;
+  --bg-surface-2: #ede8de;
+  --bg-surface-3: #e0d9cc;
+  --bg-overlay: rgba(245, 240, 232, 0.9);
+
+  /* Text */
+  --text-primary: #1a1410;
+  --text-secondary: #5c4f3f;
+  --text-muted: #9c8e7d;
+  --text-inverse: #faf7f2;
+
+  /* Brand accents */
+  --accent-primary: #1a2744;      /* Navy */
+  --accent-primary-dim: #2d3f6e;
+  --accent-secondary: #6b1f1f;    /* Burgundy */
+  --accent-secondary-bright: #8b2a2a;
+
+  /* Borders */
+  --border-subtle: rgba(26, 20, 16, 0.06);
+  --border-default: rgba(26, 20, 16, 0.12);
+  --border-strong: rgba(26, 39, 68, 0.3);
+
+  /* Modal/overlay */
+  --modal-backdrop: rgba(26, 20, 16, 0.6);
+  --modal-bg: #faf7f2;
+
+  /* Scrollbar */
+  --scrollbar-track: #ede8de;
+  --scrollbar-thumb: #c5bfb5;
+  --scrollbar-thumb-hover: #1a2744;
+
+  /* Header */
+  --header-bg: rgba(245, 240, 232, 0.95);
+  --header-border: rgba(26, 39, 68, 0.15);
+
+  /* Timeline */
+  --timeline-line: rgba(26, 39, 68, 0.2);
+  --timeline-dot: #1a2744;
+  --decade-label: rgba(26, 39, 68, 0.5);
+}
+
+/* ---- REGION COLORS (shared across themes) ---- */
+:root {
+  --region-middle-east: #e07b3a;
+  --region-middle-east-bg: rgba(224, 123, 58, 0.12);
+  --region-middle-east-border: rgba(224, 123, 58, 0.3);
+
+  --region-europe: #4a7fcf;
+  --region-europe-bg: rgba(74, 127, 207, 0.12);
+  --region-europe-border: rgba(74, 127, 207, 0.3);
+
+  --region-asia-pacific: #3aad6e;
+  --region-asia-pacific-bg: rgba(58, 173, 110, 0.12);
+  --region-asia-pacific-border: rgba(58, 173, 110, 0.3);
+
+  --region-africa: #d4a017;
+  --region-africa-bg: rgba(212, 160, 23, 0.12);
+  --region-africa-border: rgba(212, 160, 23, 0.3);
+
+  --region-americas: #c0392b;
+  --region-americas-bg: rgba(192, 57, 43, 0.12);
+  --region-americas-border: rgba(192, 57, 43, 0.3);
+
+  --region-central-asia: #9b59b6;
+  --region-central-asia-bg: rgba(155, 89, 182, 0.12);
+  --region-central-asia-border: rgba(155, 89, 182, 0.3);
+
+  --region-multi-regional: #7f8c8d;
+  --region-multi-regional-bg: rgba(127, 140, 141, 0.12);
+  --region-multi-regional-border: rgba(127, 140, 141, 0.3);
+
+  /* Spacing scale */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-20: 80px;
+
+  /* Border radii */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-2xl: 24px;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.5);
+  --shadow-xl: 0 16px 48px rgba(0, 0, 0, 0.6);
+
+  /* Transitions */
+  --transition-fast: 0.15s ease;
+  --transition-base: 0.25s ease;
+  --transition-slow: 0.4s ease;
+  --transition-slide: 0.35s cubic-bezier(0.32, 0.72, 0, 1);
+
+  /* Typography scale */
+  --font-display: 'Cinzel Decorative', 'Cinzel', serif;
+  --font-heading: 'Cinzel', serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+
+  --text-xs: 0.7rem;
+  --text-sm: 0.8125rem;
+  --text-base: 0.9375rem;
+  --text-lg: 1.0625rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 1.875rem;
+  --text-4xl: 2.25rem;
+  --text-5xl: 3rem;
+
+  /* Z-index scale */
+  --z-base: 1;
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-overlay: 300;
+  --z-modal: 400;
+  --z-toast: 500;
+}
