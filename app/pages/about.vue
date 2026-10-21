@@ -6,8 +6,8 @@
           <div class="about-eyebrow">About this project</div>
           <h1 class="about-title">Chronicle of War</h1>
           <p class="about-lead">
-            A comprehensive, living archive of every documented armed conflict since 1950 — from the wars that
-            defined the Cold War era to the forgotten insurgencies that shaped nations the world rarely notices.
+            A comprehensive, living archive of every documented armed conflict since 1900 — from the world wars
+            that reshaped global empires to the regional insurgencies that defined modern history.
           </p>
         </div>
 
@@ -47,8 +47,8 @@
               <div class="phase-item phase-item--complete">
                 <span class="phase-badge">Phase 1</span>
                 <div>
-                  <strong>Major conflicts (1950–present)</strong>
-                  <p>The 27 most significant armed conflicts of the modern era, with countries, casualties, key events, and outcomes.</p>
+                  <strong>Major & Regional conflicts (1900–present)</strong>
+                  <p>Over 75 significant armed conflicts across the modern era, with countries, casualties, key events, and outcomes.</p>
                 </div>
               </div>
               <div class="phase-item">
@@ -93,7 +93,7 @@
 useHead({
   title: 'About',
   meta: [
-    { name: 'description', content: 'About Chronicle of War — a comprehensive archive of every documented armed conflict since 1950.' }
+    { name: 'description', content: 'About Chronicle of War — a comprehensive archive of every documented armed conflict since 1900.' }
   ]
 })
 </script>

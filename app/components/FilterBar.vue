@@ -1,10 +1,35 @@
 <template>
   <div class="filter-bar" role="search" aria-label="Filter conflicts">
     <div class="filter-bar-inner container">
-      <!-- Stats summary -->
-      <div class="filter-stats">
-        <span class="stats-count">{{ resultCount }}</span>
-        <span class="stats-label">{{ resultCount === 1 ? 'conflict' : 'conflicts' }}</span>
+      <!-- Stats summary & View mode toggle -->
+      <div class="filter-stats-mode">
+        <div class="filter-stats">
+          <span class="stats-count">{{ resultCount }}</span>
+          <span class="stats-label">{{ resultCount === 1 ? 'conflict' : 'conflicts' }}</span>
+        </div>
+
+        <div class="view-mode-toggle" role="radiogroup" aria-label="Timeline view layout">
+          <button
+            id="view-mode-parallel"
+            class="mode-btn"
+            :class="{ active: viewMode === 'parallel' }"
+            @click="$emit('update:viewMode', 'parallel')"
+            title="Parallel Lines Timeline (Stream view)"
+          >
+            <span class="mode-icon">║║</span>
+            <span class="mode-text">Parallel Lines</span>
+          </button>
+          <button
+            id="view-mode-cards"
+            class="mode-btn"
+            :class="{ active: viewMode === 'cards' }"
+            @click="$emit('update:viewMode', 'cards')"
+            title="Card Grid by Decade"
+          >
+            <span class="mode-icon">▤</span>
+            <span class="mode-text">Cards</span>
+          </button>
+        </div>
       </div>
 
       <!-- Region filter -->
@@ -66,9 +91,41 @@
         </div>
       </div>
 
+      <!-- Major filter & Casualties scale -->
+      <div class="filter-group filter-group--secondary" role="group" aria-label="Additional filters">
+        <!-- Major toggle -->
+        <button
+          id="filter-major-toggle"
+          class="filter-chip filter-chip--major"
+          :class="{ active: selectedMajorOnly }"
+          @click="$emit('update:majorOnly', !selectedMajorOnly)"
+          title="Filter to major, world-altering conflicts"
+        >
+          <span class="major-star">⭐</span>
+          Major Only
+        </button>
+
+        <!-- Casualty scale select -->
+        <div class="casualty-select-wrapper">
+          <span class="filter-label">Casualties</span>
+          <select
+            id="filter-casualties-select"
+            class="filter-select"
+            :value="selectedCasualtyScale"
+            @change="$emit('update:casualtyScale', $event.target.value)"
+          >
+            <option value="all">All Tolls</option>
+            <option value="under10k">&lt; 10,000</option>
+            <option value="10k-100k">10,000 – 100,000</option>
+            <option value="100k-1m">100,000 – 1,000,000</option>
+            <option value="over1m">&gt; 1 Million</option>
+          </select>
+        </div>
+      </div>
+
       <!-- Reset -->
       <button
-        v-if="selectedRegion !== 'all' || selectedType !== 'all'"
+        v-if="selectedRegion !== 'all' || selectedType !== 'all' || selectedMajorOnly || selectedCasualtyScale !== 'all'"
         id="filter-reset-btn"
         class="reset-btn"
         @click="$emit('reset')"
@@ -83,9 +140,12 @@
 defineProps({
   selectedRegion: { type: String, default: 'all' },
   selectedType: { type: String, default: 'all' },
+  selectedMajorOnly: { type: Boolean, default: false },
+  selectedCasualtyScale: { type: String, default: 'all' },
+  viewMode: { type: String, default: 'parallel' },
   resultCount: { type: Number, default: 0 }
 })
-defineEmits(['update:region', 'update:type', 'reset'])
+defineEmits(['update:region', 'update:type', 'update:majorOnly', 'update:casualtyScale', 'update:viewMode', 'reset'])
 
 const regions = [
   { value: 'middle-east', label: 'Middle East' },
@@ -125,7 +185,14 @@ const conflictTypes = [
   flex-wrap: wrap;
 }
 
-/* Stats */
+/* Stats & View Mode */
+.filter-stats-mode {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  flex-shrink: 0;
+}
+
 .filter-stats {
   display: flex;
   align-items: baseline;
@@ -145,6 +212,45 @@ const conflictTypes = [
   font-size: var(--text-sm);
   color: var(--text-muted);
   font-weight: 500;
+}
+
+.view-mode-toggle {
+  display: flex;
+  background: var(--bg-surface-2);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 2px;
+  gap: 2px;
+}
+
+.mode-btn {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px var(--space-3);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  font-weight: 500;
+  color: var(--text-secondary);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.mode-btn:hover {
+  color: var(--text-primary);
+}
+
+.mode-btn.active {
+  background: var(--accent-primary);
+  color: var(--text-inverse);
+  font-weight: 600;
+}
+
+.mode-icon {
+  font-weight: 700;
 }
 
 /* Filter groups */
@@ -215,6 +321,51 @@ const conflictTypes = [
 .dot--americas { background: var(--region-americas); }
 .dot--central-asia { background: var(--region-central-asia); }
 .dot--multi-regional { background: var(--region-multi-regional); }
+
+/* Major Chip */
+.filter-chip--major {
+  border-color: rgba(234, 179, 8, 0.4);
+}
+.filter-chip--major:hover {
+  border-color: #eab308;
+  color: #fef08a;
+}
+.filter-chip--major.active {
+  background: linear-gradient(135deg, #ca8a04 0%, #a16207 100%);
+  color: #ffffff;
+  border-color: #eab308;
+  box-shadow: 0 0 12px rgba(234, 179, 8, 0.3);
+}
+.major-star {
+  font-size: 11px;
+}
+
+/* Casualty Select */
+.casualty-select-wrapper {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.filter-select {
+  padding: 4px var(--space-3);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  font-weight: 500;
+  color: var(--text-secondary);
+  background: var(--bg-surface-2);
+  border: 1px solid var(--border-subtle);
+  cursor: pointer;
+  outline: none;
+  transition: all var(--transition-fast);
+}
+
+.filter-select:hover, .filter-select:focus {
+  background: var(--bg-surface-3);
+  color: var(--text-primary);
+  border-color: var(--border-default);
+}
 
 /* Reset btn */
 .reset-btn {

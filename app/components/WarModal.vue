@@ -11,8 +11,8 @@
       ></div>
     </Transition>
 
-    <!-- Slide-over panel -->
-    <Transition name="panel-slide">
+    <!-- Centered dialog modal -->
+    <Transition name="modal-pop">
       <aside
         v-if="war"
         id="war-modal-panel"
@@ -29,6 +29,7 @@
         <!-- Header -->
         <div class="modal-header">
           <div class="modal-badges">
+            <span v-if="war.is_major" class="status-badge status-badge--major">⭐ Major Conflict</span>
             <span class="region-badge" :class="`region-badge--${war.region}`">
               {{ regionLabel(war.region) }}
             </span>
@@ -267,20 +268,22 @@ function formatEventDate(start, end) {
   backdrop-filter: blur(2px);
 }
 
-/* Panel */
+/* Centered Modal Dialog */
 .war-modal {
   position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: min(620px, 100vw);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: min(720px, 92vw);
+  max-height: 85vh;
   background: var(--modal-bg);
-  border-left: 1px solid var(--border-default);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-xl);
   z-index: var(--z-modal);
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  box-shadow: -8px 0 48px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.75), 0 0 0 1px rgba(255, 255, 255, 0.05);
 }
 
 /* Accent bar */
@@ -311,6 +314,18 @@ function formatEventDate(start, end) {
   flex-wrap: wrap;
   gap: var(--space-2);
   align-items: center;
+}
+
+.status-badge--major {
+  color: #fef08a;
+  background: rgba(202, 138, 4, 0.2);
+  border: 1px solid rgba(234, 179, 8, 0.4);
+  padding: 2px var(--space-2);
+  border-radius: var(--radius-sm);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
 }
 
 .modal-close {
@@ -662,13 +677,13 @@ function formatEventDate(start, end) {
   opacity: 0;
 }
 
-.panel-slide-enter-active,
-.panel-slide-leave-active {
-  transition: transform var(--transition-slide), opacity 0.3s ease;
+.modal-pop-enter-active,
+.modal-pop-leave-active {
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.25s ease;
 }
-.panel-slide-enter-from,
-.panel-slide-leave-to {
-  transform: translateX(100%);
+.modal-pop-enter-from,
+.modal-pop-leave-to {
+  transform: translate(-50%, -46%) scale(0.95);
   opacity: 0;
 }
 

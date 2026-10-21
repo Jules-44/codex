@@ -7,6 +7,7 @@
       <!-- Header row -->
       <div class="card-header-row">
         <div class="card-badges">
+          <span v-if="war.is_major" class="status-badge status-badge--major" title="Major World Conflict">⭐ Major</span>
           <span class="region-badge" :class="`region-badge--${war.region}`">
             {{ regionLabel(war.region) }}
           </span>
@@ -193,6 +194,12 @@ function truncate(text, maxLength) {
   color: #4ade80;
   background: rgba(74, 222, 128, 0.1);
   border: 1px solid rgba(74, 222, 128, 0.25);
+}
+
+.status-badge--major {
+  color: #fef08a;
+  background: rgba(202, 138, 4, 0.2);
+  border: 1px solid rgba(234, 179, 8, 0.4);
 }
 
 .status-dot {

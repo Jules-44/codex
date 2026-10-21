@@ -4,12 +4,12 @@
     <section class="hero" aria-label="Page hero">
       <div class="hero-inner container">
         <div class="hero-content">
-          <div class="hero-eyebrow">1950 — Present</div>
+          <div class="hero-eyebrow">1900 — Present</div>
           <h1 class="hero-title">Every War.<br>Every Nation.</h1>
           <p class="hero-subtitle">
             A comprehensive record of armed conflict across the modern era —
-            from the major wars that defined the Cold War to the forgotten conflicts
-            that shaped nations you've never heard of.
+            from the world wars that reshaped global borders to the forgotten conflicts
+            that defined modern history.
           </p>
           <div class="hero-stats">
             <div class="stat">
@@ -32,9 +32,9 @@
           <div class="deco-line"></div>
           <div class="deco-year">2024</div>
           <div class="deco-line"></div>
-          <div class="deco-year deco-year--mid">1987</div>
+          <div class="deco-year deco-year--mid">1960</div>
           <div class="deco-line"></div>
-          <div class="deco-year">1950</div>
+          <div class="deco-year">1900</div>
         </div>
       </div>
     </section>
@@ -43,13 +43,19 @@
     <FilterBar
       :selected-region="selectedRegion"
       :selected-type="selectedType"
+      :selected-major-only="selectedMajorOnly"
+      :selected-casualty-scale="selectedCasualtyScale"
+      :view-mode="viewMode"
       :result-count="filteredWars.length"
       @update:region="selectedRegion = $event"
       @update:type="selectedType = $event"
+      @update:majorOnly="selectedMajorOnly = $event"
+      @update:casualtyScale="selectedCasualtyScale = $event"
+      @update:viewMode="viewMode = $event"
       @reset="resetFilters"
     />
 
-    <!-- Timeline -->
+    <!-- Timeline Content -->
     <section class="timeline-section" aria-label="War timeline">
       <div class="container">
         <div v-if="filteredWars.length === 0" class="no-results">
@@ -57,26 +63,34 @@
           <button class="btn btn--ghost" @click="resetFilters">Reset filters</button>
         </div>
 
-        <div v-for="decade in decadesWithWars" :key="decade.label" class="decade-block">
-          <!-- Decade header -->
-          <div class="decade-header">
-            <div class="decade-line"></div>
-            <h2 class="decade-label">{{ decade.label }}</h2>
-            <div class="decade-line"></div>
-            <span class="decade-count">{{ decade.wars.length }}</span>
-          </div>
+        <!-- Mode A: Parallel Stream View -->
+        <ParallelTimeline
+          v-else-if="viewMode === 'parallel'"
+          :wars="filteredWars"
+          @select="openModal"
+        />
 
-          <!-- War cards grid -->
-          <div class="wars-grid">
-            <WarCard
-              v-for="war in decade.wars"
-              :key="war.id"
-              :war="war"
-              class="war-card-animate"
-              @select="openModal"
-            />
+        <!-- Mode B: Cards Grid View -->
+        <template v-else>
+          <div v-for="decade in decadesWithWars" :key="decade.label" class="decade-block">
+            <div class="decade-header">
+              <div class="decade-line"></div>
+              <h2 class="decade-label">{{ decade.label }}</h2>
+              <div class="decade-line"></div>
+              <span class="decade-count">{{ decade.wars.length }}</span>
+            </div>
+
+            <div class="wars-grid">
+              <WarCard
+                v-for="war in decade.wars"
+                :key="war.id"
+                :war="war"
+                class="war-card-animate"
+                @select="openModal"
+              />
+            </div>
           </div>
-        </div>
+        </template>
       </div>
     </section>
 
@@ -99,6 +113,9 @@ const wars = warsData
 
 const selectedRegion = ref('all')
 const selectedType = ref('all')
+const selectedMajorOnly = ref(false)
+const selectedCasualtyScale = ref('all')
+const viewMode = ref('parallel')
 const selectedWar = ref(null)
 
 const ongoingCount = computed(() => wars.filter(w => w.status === 'ongoing').length)
@@ -107,7 +124,22 @@ const filteredWars = computed(() => {
   return wars.filter(war => {
     const regionMatch = selectedRegion.value === 'all' || war.region === selectedRegion.value
     const typeMatch = selectedType.value === 'all' || war.type === selectedType.value
-    return regionMatch && typeMatch
+    const majorMatch = !selectedMajorOnly.value || war.is_major
+
+    // Casualty scale check
+    let casualtyMatch = true
+    const casNum = war.total_casualties_num || 0
+    if (selectedCasualtyScale.value === 'under10k') {
+      casualtyMatch = casNum < 10000
+    } else if (selectedCasualtyScale.value === '10k-100k') {
+      casualtyMatch = casNum >= 10000 && casNum <= 100000
+    } else if (selectedCasualtyScale.value === '100k-1m') {
+      casualtyMatch = casNum > 100000 && casNum <= 1000000
+    } else if (selectedCasualtyScale.value === 'over1m') {
+      casualtyMatch = casNum > 1000000
+    }
+
+    return regionMatch && typeMatch && majorMatch && casualtyMatch
   })
 })
 
@@ -116,7 +148,7 @@ const decadesWithWars = computed(() => {
   const decadeMap = {}
 
   filteredWars.value.forEach(war => {
-    const year = parseInt(war.start_date?.split('-')[0] || '1950')
+    const year = parseInt(war.start_date?.split('-')[0] || '1900')
     const decade = Math.floor(year / 10) * 10
     const label = `${decade}s`
     if (!decadeMap[label]) decadeMap[label] = []
@@ -151,6 +183,8 @@ function closeModal() {
 function resetFilters() {
   selectedRegion.value = 'all'
   selectedType.value = 'all'
+  selectedMajorOnly.value = false
+  selectedCasualtyScale.value = 'all'
 }
 </script>
 
